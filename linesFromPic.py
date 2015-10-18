@@ -30,9 +30,9 @@ print 'Vehicles detected: %d' % (len(vehicles))
 
 for (x,y,w,h) in vehicles:
 	#cv.CaptureFromFile( '/home/mhughes/sintel_trailer-480p.mp4' )
-	cv2.rectangle(img1, (x,y), (x+w, y+h),(255,0,0),4)
+	cv2.rectangle(img, (x,y), (x+w, y+h),(255,0,0),4)
 
-cv2.imwrite('cars.jpg',cv2.cvtColor(img1, cv2.COLOR_BGR2RGB))
+cv2.imwrite('cars.jpg',cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
 
 
 edgesL = cv2.Canny(grayL,22,66,apertureSize = 3)
